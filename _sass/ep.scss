@@ -1,5 +1,5 @@
 body {
-  font: 18px/2 sans-serif;
+  font: 18px/2 "DoHyeon-Regular", sans-serif;
   background: #111 url("#{$baseurl}/assets/europa.jpg");
   background-size: cover;
   background-attachment: fixed;
@@ -10,6 +10,12 @@ body {
   font-family: "JetBrains Mono";
   font-weight: 100;
   src: url("#{$baseurl}/assets/fonts/JetBrains_Mono/JetBrainsMono-Light.ttf")
+    format("truetype");
+}
+
+@font-face {
+  font-family: "DoHyeon-Regular";
+  src: url("#{$baseurl}/assets/fonts/Do_Hyeon/DoHyeon-Regular.ttf")
     format("truetype");
 }
 
@@ -32,12 +38,18 @@ h2 {
 
 p {
   margin: 0 0 1rem;
-  font-size: 0.9rem;
+  font-size: 1.2rem;
   line-height: 1.5;
 }
 
+a {
+  color: #f7d969;
+  font-weight: bold;
+  font-family: "JetBrains Mono";
+}
+
 li {
-  font-size: 0.8rem;
+  font-size: 1.4rem;
   font-family: "JetBrains Mono";
   font-weight: 100;
 }
@@ -69,11 +81,9 @@ li {
   padding: 2rem;
 
   a {
-    color: #f7d969;
     font-weight: bold;
     font-size: 1.5rem;
     line-height: 1;
-    font-family: "JetBrains Mono";
   }
 }
 
@@ -94,7 +104,7 @@ li {
   grid-column: 1/3;
   grid-row: 3;
   color: #fff;
-  background-color: rgba(#2f9395, 0.5);
+  background-color: rgba(#2f9395, 0.7);
   padding: 2rem;
   border-radius: 1rem;
 
@@ -104,14 +114,14 @@ li {
   }
 
   p {
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
 
   img {
     display: block;
     width: 100%;
     height: auto;
-    opacity: 0.5;
+    opacity: 0.8;
   }
 }
 
@@ -127,5 +137,32 @@ li {
 
   .vid {
     margin-bottom: 2rem;
+  }
+  .vid iframe {
+    border-radius: 1rem;
+    border: 1rem solid rgba(#f7d969, 0.5);
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .holla {
+    display: block;
+    margin-top: 3rem;
+    padding: 0 1rem;
+  }
+
+  .box {
+    width: auto;
+    margin: 0 0 2rem;
+    max-width: 32rem;
+  }
+
+  h1 {
+    font-size: 4rem;
+    text-shadow: -5px 5px #f7d969, -10px 10px #a6206a, -15px 15px #000000;
+  }
+
+  h2 {
+    font-size: 1.8rem;
   }
 }
